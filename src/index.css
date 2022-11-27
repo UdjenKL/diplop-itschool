@@ -1,0 +1,39 @@
+body {
+  background: green;
+  margin: 0;
+}
+
+.wrapper {
+  background: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  max-width: 1080px;
+  margin: 50px auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header .header-left-block {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+header .header-left-block img {
+  margin-right: 15px;
+}
+header .header-left-block h3,
+header .header-left-block p {
+  margin: 0;
+}
+header ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+header ul li {
+  list-style-type: none;
+}
+
+/*# sourceMappingURL=index.css.map */
