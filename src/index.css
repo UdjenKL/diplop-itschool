@@ -1,6 +1,7 @@
 body {
   background: green;
   margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
 .wrapper {
@@ -10,30 +11,78 @@ body {
   max-width: 1080px;
   margin: 50px auto;
 }
-
-header {
+.wrapper header {
+  border-bottom: 1px solid #eaeaea;
+  padding: 40px;
   display: flex;
   justify-content: space-between;
 }
-header .header-left-block {
+.wrapper header .header-left-block {
   display: flex;
-  align-items: center;
-  padding: 20px;
+  padding: 0;
 }
-header .header-left-block img {
+.wrapper header .header-left-block img {
   margin-right: 15px;
 }
-header .header-left-block h3,
-header .header-left-block p {
+.wrapper header .header-left-block h3,
+.wrapper header .header-left-block p {
+  text-transform: uppercase;
   margin: 0;
 }
-header ul {
+.wrapper header ul {
   margin: 0;
   padding: 0;
   text-decoration: none;
 }
-header ul li {
+.wrapper header ul li {
   list-style-type: none;
+}
+.wrapper header .header-right-block {
+  display: flex;
+}
+.wrapper header .header-right-block li {
+  margin-right: 30px;
+}
+.wrapper .content .presents {
+  display: flex;
+}
+.wrapper .content h1 {
+  margin: 0;
+}
+.wrapper .content .content-title {
+  margin-bottom: 40px;
+}
+.wrapper .card {
+  border: 3px solid #F8F8F8;
+  padding: 30px;
+  margin-right: 6px;
+  width: 150px;
+  border-radius: 50px;
+}
+.wrapper .card h5 {
+  font-weight: 400;
+  font-size: 14px;
+}
+.wrapper .card .card-info {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.wrapper .card .card-info .card-info-price {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .card .card-info .button {
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 42px;
+  width: 42px;
+  cursor: pointer;
+}
+.wrapper .card .card-info .button:hover {
+  background: green;
 }
 
 /*# sourceMappingURL=index.css.map */
