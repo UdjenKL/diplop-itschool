@@ -1,10 +1,10 @@
-function Card() {
+function Card({image}) {
     return (
         <div className="card">
             <div className="favorite">
                 <img src="/img/heart.svg" alt="heart"/>
             </div>
-            <img width={133} height={112} src="/img/presents/1.jpeg" alt=""/>
+            <img width={363} height={363} src={image} alt=""/>
             <p>Букет 1</p>
             <div className="card-info">
                 <div className="card-info-price">

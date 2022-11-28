@@ -12,7 +12,7 @@ body {
   background: white;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   border-radius: 20px;
-  max-width: 1080px;
+  max-width: 95%;
   margin: 50px auto;
 }
 .wrapper header {
@@ -48,13 +48,14 @@ body {
   display: flex;
 }
 .wrapper header .header-right-block li {
-  margin-right: 30px;
+  margin-right: 40px;
 }
 .wrapper .content {
   padding: 40px;
 }
 .wrapper .content .presents {
   display: flex;
+  flex-wrap: wrap;
 }
 .wrapper .content .content-header {
   display: flex;
@@ -79,10 +80,10 @@ body {
 }
 .wrapper .card {
   border: 3px solid #F8F8F8;
-  padding: 30px;
-  margin-right: 6px;
-  width: 150px;
-  border-radius: 50px;
+  padding: 20px 0 20px 20px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  width: 385px;
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 .wrapper .card:hover {
@@ -92,6 +93,14 @@ body {
 .wrapper .card .favorite {
   position: absolute;
   cursor: pointer;
+}
+.wrapper .card .favorite img {
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
+.wrapper .card .favorite img:hover {
+  background: violet;
 }
 .wrapper .card span {
   font-size: 13px;
@@ -107,7 +116,7 @@ body {
 }
 .wrapper .card .card-info {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
 }
 .wrapper .card .card-info .card-info-price {
