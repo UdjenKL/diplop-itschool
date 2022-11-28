@@ -1,12 +1,43 @@
 function App() {
     return (
         <div className="wrapper">
+            <div className="right-side-impose">
+                <div className="right-side">
+                    <h2 className="cart-title">Корзина</h2>
+                    <div className="items">
+                        <div className="cartItem">
+                            <img width={70} height={70} src="/img/presents/1.jpeg" alt="cart"/>
+                            <div className="cartItem-info">
+                                <p>Букет 1</p>
+                                <b>1000</b>
+                            </div>
+                            <img className="removeBtn" src="/img/btn-remove.svg" alt="remove"/>
+                        </div>
+                        <div className="cartItem">
+                            <img width={70} height={70} src="/img/presents/1.jpeg" alt="cart"/>
+                            <div className="cartItem-info">
+                                <p>Букет 1</p>
+                                <b>1000</b>
+                            </div>
+                            <img className="removeBtn" src="/img/btn-remove.svg" alt="remove"/>
+                        </div>
+                    </div>
+                    <ul className="total">
+                        <li>
+                            <span>Итого:</span>
+                            <div></div>
+                            <b>1000</b>
+                        </li>
+                    </ul>
+                    <button>Оформить заказ</button>
+                </div>
+            </div>
             <header>
                 <div className="header-left-block">
                     <img width={120} height={150} src="/img/logoMain.jpg"/>
                     <div className="header-information">
                         <h3>PresentOnline</h3>
-                        <p>Магазин букетов</p>
+                        <p className="header-logo-text">Магазин букетов</p>
                     </div>
                 </div>
                 <ul className="header-right-block">
@@ -20,10 +51,19 @@ function App() {
                 </ul>
             </header>
             <div className="content">
-                <h1 className="content-title">Все Букеты</h1>
+                <div className="content-header">
+                    <h1 className="content-title">Все Букеты</h1>
+                    <div className="search-block">
+                        <img src="/img/search.svg" alt="search"/>
+                        <input placeholder="Поиск..."/>
+                    </div>
+                </div>
                 <div className="presents">
                     <div className="card">
-                        <img width={133} height={112} src="/img/cart.svg" alt=""/>
+                        <div className="favorite">
+                            <img src="/img/heart.svg" alt="heart"/>
+                        </div>
+                        <img width={133} height={112} src="/img/presents/1.jpeg" alt=""/>
                         <p>Букет 1</p>
                         <div className="card-info">
                             <div className="card-info-price">
