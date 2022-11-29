@@ -8,7 +8,7 @@ function RightSide({onClose, items = []}) {
                 <div className="items">
                     {items.map((obj) => (
                         <div className="cartItem">
-                            <img width={70} height={70} src={obj.image} alt="cart"/>
+                            <img width={140} height={140} src={obj.image} alt="cart"/>
                             <div className="cartItem-info">
                                 <p>{obj.title}</p>
                                 <b>{obj.price}</b>
