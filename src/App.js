@@ -4,23 +4,20 @@ import RightSide from "./components/RightSide";
 import Card from "./components/Card";
 import React from "react";
 
-const arr = [
-    {name: 'букет 1', price: 1000, image: '/img/presents/1.jpeg'},
-    {name: 'букет 2', price: 1000, image: '/img/presents/2.jpg'},
-    {name: 'букет 3', price: 1000, image: '/img/presents/3.jpg'},
-    {name: 'букет 4', price: 1000, image: '/img/presents/4.jpg'},
-    {name: 'букет 5', price: 1000, image: '/img/presents/5.jpg'},
-    {name: 'букет 6', price: 1000, image: '/img/presents/6.jpg'},
-    {name: 'букет 7', price: 1000, image: '/img/presents/7.jpg'},
-    {name: 'букет 8', price: 1000, image: '/img/presents/8.jpg'},
-    {name: 'букет 9', price: 1000, image: '/img/presents/9.jpg'},
-    {name: 'букет 10', price: 1000, image: '/img/presents/10.jpeg'},
-    {name: 'букет 9', price: 1000, image: '/img/presents/11.jpeg'},
-    {name: 'букет 10', price: 1000, image: '/img/presents/12.jpeg'},
-];
 
 function App() {
     const [cartOpened, setCartOpened] = React.useState(false);
+    const [items, setItems] = React.useState([]);
+
+    React.useEffect(() => {
+        fetch('https://6341bc1320f1f9d79978ecb3.mockapi.io/items').then((response) => {
+        return response.json();
+    }).then(json => {
+        setItems(json);
+        console.log(json);
+    });
+    } , []);
+
 
     return (
         <div className="wrapper">
@@ -36,7 +33,7 @@ function App() {
                 </div>
                 <div className="presents">
                     {
-                        arr.map((item) => (
+                        items.map((item) => (
                             <Card
                                 title={item.name}
                                 price={item.price}
