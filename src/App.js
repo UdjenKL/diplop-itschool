@@ -6,6 +6,7 @@ import React from "react";
 
 
 function App() {
+    const [cartItems,setCartItems] = React.useState([]);
     const [cartOpened, setCartOpened] = React.useState(false);
     const [items, setItems] = React.useState([]);
 
@@ -18,10 +19,16 @@ function App() {
     });
     } , []);
 
+const onAddToCart = (obj) => {
+    setCartItems([...cartItems,obj])
+
+};
+
+console.log(cartItems);
 
     return (
         <div className="wrapper">
-            {cartOpened ? <RightSide onClose={() => setCartOpened(false)}/> : null}
+            {cartOpened ? <RightSide items={cartItems} onClose={() => setCartOpened(false)}/> : null}
             <Header onClick={() => setCartOpened(true)}/>
             <div className="content">
                 <div className="content-header">
@@ -35,11 +42,12 @@ function App() {
                     {
                         items.map((item) => (
                             <Card
+                                key = {item.image}
                                 title={item.name}
                                 price={item.price}
                                 image={item.image}
                                 onFavorite={() => console.log('add in favorite')}
-                                onPlus={() => console.log('enter +')}
+                                onPlus={(obj) => onAddToCart(obj)}
                             />
 
                         ))
