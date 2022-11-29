@@ -64,6 +64,8 @@ body {
 }
 .wrapper .content .content-header .content-title {
   margin: 0 auto;
+  font-weight: 5000;
+  background: red;
 }
 .wrapper .content .content-header .search-block {
   display: flex;
@@ -116,26 +118,15 @@ body {
 }
 .wrapper .card .card-info {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
+  width: 90%;
 }
 .wrapper .card .card-info .card-info-price {
   display: flex;
   flex-direction: column;
 }
-.wrapper .card .card-info .button {
-  background: #ffffff;
-  border: 1px solid #f2f2f2;
-  box-sizing: border-box;
-  border-radius: 8px;
-  height: 42px;
-  width: 42px;
-  cursor: pointer;
-}
-.wrapper .card .card-info .button:hover {
-  background: green;
-}
-
 .right-side-impose {
   position: absolute;
   left: 0;
@@ -158,6 +149,8 @@ body {
 }
 .right-side-impose .right-side .cart-title {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 .right-side-impose .right-side h2 {
   margin: 0;

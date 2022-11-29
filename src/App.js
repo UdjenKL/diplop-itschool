@@ -1,6 +1,8 @@
-import Card from './components/Card'
+import Index from './components/Card'
 import Header from "./components/Header";
 import RightSide from "./components/RightSide";
+import Card from "./components/Card";
+import React from "react";
 
 const arr = [
     {name: 'букет 1', price: 1000, image: '/img/presents/1.jpeg'},
@@ -17,15 +19,16 @@ const arr = [
     {name: 'букет 10', price: 1000, image: '/img/presents/12.jpeg'},
 ];
 
-function
-App() {
+function App() {
+    const [cartOpened, setCartOpened] = React.useState(false);
+
     return (
         <div className="wrapper">
-            <RightSide/>
-            <Header/>
+            {cartOpened ? <RightSide onClose={() => setCartOpened(false)}/> : null}
+            <Header onClick={() => setCartOpened(true)}/>
             <div className="content">
                 <div className="content-header">
-                    <h1 className="content-title">Все Букеты</h1>
+                    <h1 className="content-title">All Presents</h1>
                     <div className="search-block">
                         <img src="/img/search.svg" alt="search"/>
                         <input placeholder="Поиск..."/>
@@ -34,7 +37,13 @@ App() {
                 <div className="presents">
                     {
                         arr.map((item) => (
-                            <Card title={item.name} price={item.price} image={item.image}/>
+                            <Card
+                                title={item.name}
+                                price={item.price}
+                                image={item.image}
+                                onFavorite={() => console.log('add in favorite')}
+                                onPlus={() => console.log('enter +')}
+                            />
 
                         ))
                     }

@@ -79,8 +79,11 @@ body {
       margin-bottom: 40px;
       justify-content: space-between;
 
-      .content-title {;
+      .content-title {
         margin: 0 auto;
+        font-weight: 5000;
+        background: red;
+
       }
 
       .search-block {
@@ -152,8 +155,10 @@ body {
 
     .card-info {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      align-items: center;
       text-align: center;
+      width: 90%;
 
       .card-info-price {
         display: flex;
@@ -162,19 +167,11 @@ body {
 
       }
 
-      .button {
-        background: #ffffff;
-        border: 1px solid #f2f2f2;
-        box-sizing: border-box;
-        border-radius: 8px;
-        height: 42px;
-        width: 42px;
-        cursor: pointer;
+    img {
+      //display: flex;
+    }
 
-        &:hover {
-          background: green;
-        }
-      }
+
 
     }
   }
@@ -203,6 +200,8 @@ body {
 
     .cart-title {
       margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
     }
 
     h2 {

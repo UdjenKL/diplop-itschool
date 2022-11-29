@@ -1,8 +1,9 @@
-function RightSide () {
+function RightSide (props) {
     return (
-        <div style={{display: 'none'}} className="right-side-impose">
+        <div className="right-side-impose">
         <div className="right-side">
-                    <h2 className="cart-title">Корзина</h2>
+                    <h2 className="cart-title">Корзина <img width={30} height={30} onClick={props.onClose} src="/img/xmark-solid.svg" alt="close"/>
+                    </h2>
                     <div className="items">
                         <div className="cartItem">
                             <img width={70} height={70} src="/img/presents/1.jpeg" alt="cart"/>
