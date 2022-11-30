@@ -1,4 +1,4 @@
-function RightSide({onClose, items = []}) {
+function RightSide({onClose, onRemove, items = []}) {
     return (
         <div className="right-side-impose">
             <div className="right-side">
@@ -13,7 +13,7 @@ function RightSide({onClose, items = []}) {
                                 <p>{obj.title}</p>
                                 <b>{obj.price}</b>
                             </div>
-                            <img className="removeBtn" src="/img/btn-remove.svg" alt="remove"/>
+                            <img onClick={() => onRemove(obj.id)} className="removeBtn" src="/img/btn-remove.svg" alt="remove"/>
                         </div>
                     ))}
                 </div>

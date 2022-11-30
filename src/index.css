@@ -84,7 +84,7 @@ body {
   padding: 20px 0 20px 20px;
   margin-right: 40px;
   margin-bottom: 20px;
-  width: 385px;
+  width: 370px;
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 .wrapper .card:hover {
@@ -126,12 +126,21 @@ body {
   display: flex;
   flex-direction: column;
 }
+.right-side-impose {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999999;
+}
 .right-side-impose .right-side {
   position: absolute;
   width: 470px;
-  height: 323%;
+  height: 100%;
   right: 35px;
-  background: lightseagreen;
+  background: #45CB53;
   padding: 30px;
   display: flex;
   flex-direction: column;
