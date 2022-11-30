@@ -9,7 +9,7 @@ function App() {
     const [cartItems, setCartItems] = React.useState([]);
     const [cartOpened, setCartOpened] = React.useState(false);
     const [items, setItems] = React.useState([]);
-    const [searchValue, setSearchValue] = React.useState(' ');
+    const [searchValue, setSearchValue] = React.useState('');
 
     React.useEffect(() => {
         //     fetch('https://6341bc1320f1f9d79978ecb3.mockapi.io/items').then((response) => {
