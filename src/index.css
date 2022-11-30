@@ -91,18 +91,6 @@ body {
   box-shadow: 0 14px 30px rgb(0, 0, 0);
   transform: translateY(-5px);
 }
-.wrapper .card .favorite {
-  position: absolute;
-  cursor: pointer;
-}
-.wrapper .card .favorite img {
-  position: relative;
-  left: 20px;
-  top: 20px;
-}
-.wrapper .card .favorite img:hover {
-  background: violet;
-}
 .wrapper .card span {
   font-size: 13px;
   opacity: 0.5;
@@ -140,7 +128,7 @@ body {
   width: 470px;
   height: 100%;
   right: 35px;
-  background: #45CB53;
+  background: white;
   padding: 30px;
   display: flex;
   flex-direction: column;

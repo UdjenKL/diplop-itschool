@@ -121,21 +121,6 @@ body {
       transform: translateY(-5px);
     }
 
-    .favorite {
-      position: absolute;
-      cursor: pointer;
-
-
-      img {
-        position: relative;
-        left: 20px;
-        top: 20px;
-
-        &:hover {
-          background: violet;
-        }
-      }
-    }
 
     span {
       font-size: 13px;
@@ -191,7 +176,7 @@ body {
     width: 470px;
     height: 100%;
     right: 35px;
-    background: #45CB53;
+    background: white;
     padding: 30px;
     display: flex;
     flex-direction: column;

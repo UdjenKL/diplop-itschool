@@ -10,10 +10,7 @@ function Card({onFavorite,image,title,price,onPlus}) {
     }
     return (
         <div className="card">
-            <div className="favorite" onClick={onFavorite}>
-                <img src="/img/heart.svg" alt="heart"/>
-            </div>
-            <img width={363} height={363} src={image} alt=""/>
+            <img width={350} height={353} src={image} alt=""/>
             <p>{title}</p>
             <div className="card-info">
                 <div className="card-info-price">
