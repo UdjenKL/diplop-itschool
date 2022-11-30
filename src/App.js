@@ -9,6 +9,7 @@ function App() {
     const [cartItems,setCartItems] = React.useState([]);
     const [cartOpened, setCartOpened] = React.useState(false);
     const [items, setItems] = React.useState([]);
+    const [searchValue,setSearchValue] = React.useState('');
 
     React.useEffect(() => {
         fetch('https://6341bc1320f1f9d79978ecb3.mockapi.io/items').then((response) => {
@@ -21,8 +22,11 @@ function App() {
 
 const onAddToCart = (obj) => {
     setCartItems([...cartItems,obj])
-
 };
+
+const changeInput = (event) => {
+    setSearchValue(event.target.value);
+}
 
 console.log(cartItems);
 
@@ -32,10 +36,10 @@ console.log(cartItems);
             <Header onClick={() => setCartOpened(true)}/>
             <div className="content">
                 <div className="content-header">
-                    <h1 className="content-title">All Presents</h1>
+                    <h1 className="content-title">{searchValue ? `Поиск: "${searchValue}"` : 'Все букеты'}</h1>
                     <div className="search-block">
                         <img src="/img/search.svg" alt="search"/>
-                        <input placeholder="Поиск..."/>
+                        <input onChange={changeInput} placeholder="Поиск..."/>
                     </div>
                 </div>
                 <div className="presents">
