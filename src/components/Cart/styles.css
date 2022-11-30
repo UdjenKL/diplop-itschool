@@ -1,0 +1,118 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 768px) {
+  .overlay {
+    background: inherit;
+  }
+}
+.overlay .drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 30%;
+  background: white;
+}
+@media screen and (max-width: 1680px) {
+  .overlay .drawer {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .overlay .drawer {
+    width: 100%;
+  }
+}
+.overlay .cart {
+  padding: 40px 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .overlay .cart {
+    padding: 20px 20px;
+  }
+}
+.overlay .cart .items-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .overlay .cart .items-list {
+    margin-bottom: 20px;
+  }
+}
+.overlay .cart_header {
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.overlay .cart_close-btn {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.overlay .cart_close-btn:hover {
+  opacity: 1;
+}
+.overlay .cart_total {
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+.overlay .cart_total-phone-input {
+  flex: 1;
+  margin-bottom: 40px;
+}
+.overlay .cart_total-phone-input input {
+  border: 1px solid #efefef;
+  border-radius: 10px;
+}
+.overlay .cart_total-description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.overlay .cart_total-dots {
+  flex: 1;
+  margin: 0 10px;
+  border-bottom: 1px dashed #9d9d9d;
+}
+.overlay .cart_total-price {
+  font-weight: 600;
+}
+.overlay .cart_final {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.overlay .cart_final-wrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.overlay .cart_final h1 {
+  margin-bottom: 20px;
+}
+.overlay .cart_final p {
+  color: #9d9d9d;
+  margin-bottom: 40px;
+}
+
+/*# sourceMappingURL=styles.css.map */

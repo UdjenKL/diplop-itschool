@@ -1,0 +1,30 @@
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 40px;
+}
+@media screen and (max-width: 576px) {
+  .content-wrapper {
+    padding: 20px;
+  }
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .content-header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content-header > * {
+    margin-bottom: 20px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

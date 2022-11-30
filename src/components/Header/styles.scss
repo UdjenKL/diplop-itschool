@@ -1,0 +1,63 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  align-items: center;
+  border-bottom: 1px solid $color-grey-1;
+
+  @include mq($mq-md) {
+    flex-direction: column;
+    padding:0;
+    padding-bottom: 20px;
+  }
+
+  &_left {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 15px;
+    }
+
+    p {
+      color: $color-text-grey-2;
+    }
+
+    @include mq($mq-md) {
+      padding-bottom:40px;
+    }
+
+  }
+
+  &_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    *{
+      cursor: pointer;
+    }
+
+    .backet, .heart, .user {
+      display: flex;
+      img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+      }
+    }
+
+    .backet{
+      img {
+        margin-right: 10px;
+      }
+    }
+
+  }
+
+}

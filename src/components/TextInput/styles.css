@@ -1,0 +1,18 @@
+.text-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 1px solid #d7d7d7;
+  outline: none;
+  font-size: 1rem;
+}
+.text-input::placeholder {
+  color: #9d9d9d;
+}
+.text-input__error {
+  border: 1px solid red;
+}
+.text-input__error-message {
+  color: red;
+}
+
+/*# sourceMappingURL=styles.css.map */

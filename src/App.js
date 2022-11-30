@@ -1,78 +1,84 @@
-import axios from 'axios';
-import Header from "./components/Header";
-import RightSide from "./components/RightSide";
-import Card from "./components/Card";
-import React from "react";
+import React, { useEffect, useReducer, useState} from 'react';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Favourites from "./pages/Favourites";
+import Main from "./pages/Main/Main";
+import './App.scss'
+import Orders from "./pages/Orders";
+import Context from "./context";
+import useLocalStorage from "./customHooks/useLocalStorage";
+import {getItems} from './services'
+import {reducer, initialState, selectors} from './store.js'
+
+const App = () => {
+
+    const [goodsWithMarkers, setGoodsWithMarkers] = useState([]);
+    const [searchParms, setSearchParms] = useState('')
+    const [storedMarkers, setStoredMarkers] = useLocalStorage('storedMarkers')
 
 
-function App() {
-    const [cartItems, setCartItems] = React.useState([]);
-    const [cartOpened, setCartOpened] = React.useState(false);
-    const [items, setItems] = React.useState([]);
-    const [searchValue, setSearchValue] = React.useState('');
+    const [data, dispatch] = useReducer(reducer, initialState)
 
-    React.useEffect(() => {
-        //     fetch('https://6341bc1320f1f9d79978ecb3.mockapi.io/items').then((response) => {
-        //     return response.json();
-        // }).then(json => {
-        //     setItems(json);
-        //     console.log(json);
-        // });
+    useEffect(async () => {
+        const goods = await getItems(12);
+        dispatch({type: "initGoods", payload: goods})
+        if (storedMarkers) dispatch({type: "loadMarkers", payload: storedMarkers})
+        else dispatch({type: "initMarkers", payload: goods})
 
+    }, [])
 
-        axios.get('https://6341bc1320f1f9d79978ecb3.mockapi.io/items').then((res) => {
-            setItems(res.data);
-        });
-        axios.get('https://6341bc1320f1f9d79978ecb3.mockapi.io/cart').then((res) => {
-            setCartItems(res.data);
-        });
-    }, []);
+    function checkPosition() {
+        const height = document.documentElement.scrollHeight
+        const screenHeight = window.innerHeight
+        const scrolled = window.scrollY
 
-    const onAddToCart = (obj) => {
-        axios.post('https://6341bc1320f1f9d79978ecb3.mockapi.io/cart', obj);
-        setCartItems([...cartItems, obj])
-    };
-    const onRemoveItem = (id) => {
-        axios.delete(`https://6341bc1320f1f9d79978ecb3.mockapi.io/cart/${id}`);
-        setCartItems((prev)=> prev.filter((item) => item.id !== id));
+        if (height - screenHeight == scrolled) {
+            console.log("Load some more items")
+        }
     }
 
-    const onChangeSearchInput = (event) => {
-        setSearchValue(event.target.value);
-    };
+    useEffect(() => {
+        window.addEventListener("scroll", checkPosition);
+    }, [])
 
-    console.log(cartItems);
+
+    useEffect(() => {
+        const goodsWithMarkers = selectors.goodsWithMarkers(data)
+        if (goodsWithMarkers) {
+            setGoodsWithMarkers(goodsWithMarkers)
+        }
+    }, [data])
+
+
+    useEffect(() => {
+        if (data.markers.length != 0) setStoredMarkers(data.markers);
+    }, [data.markers])
+
+
+    const handleOrder = () => {
+        const orderNumber = Math.floor(Math.random() * 10000)
+        dispatch({type: "moveItemsToHistory"})
+        return orderNumber;
+    }
 
     return (
-        <div className="wrapper">
-            {cartOpened ? <RightSide items={cartItems} onClose={() => setCartOpened(false)} onRemove={onRemoveItem}/> : null }
-            <Header onClick={() => setCartOpened(true)}/>
-            <div className="content">
-                <div className="content-header">
-                    <h1 className="content-title">{searchValue ? `Поиск: "${searchValue}"` : 'Все букеты'}</h1>
-                    <div className="search-block">
-                        <img src="/img/search.svg" alt="search"/>
-                        <input onChange={onChangeSearchInput} value={searchValue} placeholder="Поиск..."/>
-                    </div>
-                </div>
-                <div className="presents">
-                    {items
-                        .filter((item) => item.name.includes(searchValue))
-                        .map((item, index) => (
-                            <Card
-                                key={index}
-                                title={item.name}
-                                price={item.price}
-                                image={item.image}
-                                onFavorite={() => console.log('add in favorite')}
-                                onPlus={(obj) => onAddToCart(obj)}
-                            />
-                        ))}
 
-                </div>
-            </div>
-        </div>
+        <Context.Provider value={{
+            searchParms,
+            goodsWithMarkers,
+            setSearchParms,
+            dispatch,
+            handleOrder
+        }}>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/favourites' element={<Favourites/>}/>
+                    <Route path='/orders' element={<Orders/>}/>
+                    <Route path='/' element={<Main/>}/>
+                </Routes>
+            </BrowserRouter>
+        </Context.Provider>
+
     );
-}
+};
 
 export default App;

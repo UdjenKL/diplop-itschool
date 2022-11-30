@@ -1,0 +1,54 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 220px;
+  border: 1px solid #efefef;
+  border-radius: 20px;
+  padding: 40px;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 10px;
+  }
+}
+.card:hover {
+  box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px);
+}
+.card_favourite {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  cursor: pointer;
+}
+.card_img {
+  margin-bottom: 15px;
+  align-self: center;
+}
+.card_description {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card_bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  gap: 10px;
+  align-items: center;
+}
+.card_bottom .price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card_bottom .price p {
+  color: #9d9d9d;
+  font-size: 11px;
+  font-weight: 500;
+}
+.card_bottom .price span {
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=styles.css.map */

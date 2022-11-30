@@ -1,0 +1,30 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d48000;
+  border-radius: 10px;
+  border: 0;
+  padding: 20px 40px;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+}
+.btn:hover {
+  background: #ee8f00;
+  cursor: pointer;
+}
+.btn:hover .btn-arrow-right {
+  transform: translateX(5px);
+}
+.btn:hover .btn-arrow-left {
+  transform: translateX(-5px);
+}
+.btn-arrow-right {
+  margin-left: 20px;
+}
+.btn-arrow-left {
+  margin-right: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,30 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 40px;
+  @include mq($mq-sm) {
+    padding: 20px;
+  }
+
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @include mq($mq-md) {
+    flex-direction: column;
+    justify-content: center;
+    &>*{
+      margin-bottom: 20px;
+    }
+
+  }
+}

@@ -1,0 +1,29 @@
+.search {
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.search_find-icon {
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
+}
+.search_delete-icon {
+  margin-left: 10px;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+.search input {
+  border: 0;
+}
+.search input:focus {
+  outline: none;
+}
+.search input::placeholder {
+  color: #9d9d9d;
+}
+
+/*# sourceMappingURL=styles.css.map */

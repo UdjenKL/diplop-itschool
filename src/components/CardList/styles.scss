@@ -1,0 +1,12 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.cards {
+  display: flex;
+  gap:20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+
+
+}

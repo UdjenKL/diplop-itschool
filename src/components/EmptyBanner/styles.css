@@ -1,0 +1,28 @@
+.emty_banner {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.emty_banner .centerXY {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 20rem;
+}
+.emty_banner .centerXY .smile {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+}
+.emty_banner .centerXY h2 {
+  margin-bottom: 20px;
+}
+.emty_banner .centerXY p {
+  text-align: center;
+  color: #9d9d9d;
+  margin-bottom: 40px;
+}
+
+/*# sourceMappingURL=styles.css.map */

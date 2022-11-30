@@ -1,0 +1,66 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 220px;
+  border: 1px solid $color-grey-1;
+  border-radius: 20px;
+  padding: 40px;
+
+
+  @include mq($mq-md) {
+    padding: 10px;
+  }
+
+
+  &:hover {
+    box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+  }
+
+  &_favourite {
+    position: absolute;
+    top:30px;
+    left: 30px;
+    cursor: pointer;
+  }
+
+  &_img {
+    margin-bottom: 15px;
+    align-self: center;
+  }
+
+  &_description {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &_bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    gap: 10px;
+    align-items: center;
+    .price {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      p {
+
+        color: $color-text-grey-2;
+        font-size: 11px;
+        font-weight: 500;
+      }
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+
+
+  }
+}
