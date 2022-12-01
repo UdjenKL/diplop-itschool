@@ -57,7 +57,7 @@ export const data = [
         "id": "10",
         "description": "Букет Фруктовый сад",
         "price": "100",
-        "imgSource": "img/resents/10.jpeg"
+        "imgSource": "img/resents/10.jpg"
     },
     {
         "id": "11",
