@@ -8,10 +8,44 @@
   align-items: center;
   border-bottom: 1px solid $color-grey-1;
 
+
+  @include mq($mq-xs) {
+
+    //background: red;
+
+    .header_left {
+      //background: green;
+      flex-direction: column;
+
+      img {
+        width: 300px;
+        height: 100px;
+      }
+    }
+
+  }
+
+  @include mq($mq-sm) {
+
+    //background: red;
+
+    .header_left {
+      //background: green;
+      flex-direction: column;
+
+      img {
+        width: 300px;
+        height: 100px;
+      }
+    }
+
+  }
+
   @include mq($mq-md) {
     flex-direction: column;
-    padding:0;
+    padding: 0;
     padding-bottom: 20px;
+
   }
 
   &_left {
@@ -27,7 +61,7 @@
     }
 
     @include mq($mq-md) {
-      padding-bottom:40px;
+      padding-bottom: 40px;
     }
 
   }
@@ -38,12 +72,13 @@
     justify-content: center;
     gap: 30px;
 
-    *{
+    * {
       cursor: pointer;
     }
 
     .backet, .heart, .user {
       display: flex;
+
       img {
         display: flex;
         align-items: center;
@@ -52,7 +87,7 @@
       }
     }
 
-    .backet{
+    .backet {
       img {
         margin-right: 10px;
       }
