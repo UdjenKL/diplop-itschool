@@ -3,13 +3,13 @@ export const data = [
         "id": "1",
         "description": "Букет Сладость 2022",
         "price": "80",
-        "imgSource": "img/Presents/1.jpg"
+        "imgSource": "img/presents/1.jpg"
     },
     {
         "id": "2",
         "description": "Букет Мужской",
         "price": "90",
-        "imgSource": "img/Presents/2.jpg"
+        "imgSource": "img/presents/2.jpg"
     },
     {
         "id": "3",
