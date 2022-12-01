@@ -57,7 +57,7 @@ export const data = [
         "id": "10",
         "description": "Букет Фруктовый сад",
         "price": "100",
-        "imgSource": "img/resents/10.jpg"
+        "imgSource": "img/resents/10.jpeg"
     },
     {
         "id": "11",
@@ -69,6 +69,6 @@ export const data = [
         "id": "12",
         "description": "Букет Мужской",
         "price": "100",
-        "imgSource": "img/presents/12.jpg"
+        "imgSource": "img/presents/12.jpeg"
     }
 ]
