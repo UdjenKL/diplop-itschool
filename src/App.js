@@ -8,6 +8,7 @@ import Context from "./context";
 import useLocalStorage from "./customHooks/useLocalStorage";
 import {getItems} from './services'
 import {reducer, initialState, selectors} from './store.js'
+import About from "./pages/About";
 
 const App = () => {
 
@@ -71,6 +72,7 @@ const App = () => {
         }}>
             <BrowserRouter>
                 <Routes>
+                    <Route path='/about' element={<About/>}/>
                     <Route path='/favourites' element={<Favourites/>}/>
                     <Route path='/orders' element={<Orders/>}/>
                     <Route path='/' element={<Main/>}/>

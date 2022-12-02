@@ -92,7 +92,7 @@ const Cart = ({onClose, items, handleOrder, handleCart, priceSumm}) => {
                             </div>
                             : <div className='cart_final'>
                                 <div className='cart_final-wrapper'>
-                                    <img src="/img/empty-cart.svg" alt=""/>
+                                    <img src="/img/about.png" alt=""/>
                                     <h1>Корзина пустая</h1>
                                     <Link to='/'>
                                         <Button onClick={onClose} type='arrow-left'>

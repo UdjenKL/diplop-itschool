@@ -6,6 +6,9 @@
   box-sizing: border-box;
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out, background 0.2s ease-in-out;
 }
+html {
+  background-image: linear-gradient(145deg, #ee82ee, slateblue, #ffd86a, purple);
+}
 
 ul {
   list-style: none;
