@@ -17,6 +17,7 @@
   transform: translateY(-5px);
 }
 .card_favourite {
+
   position: absolute;
   top: 30px;
   left: 30px;

@@ -31,7 +31,7 @@ const Orders = () => {
                         ?
                         <Fragment>
                             <ContentHeader>
-                                <h1>Мои покупки</h1>
+                                <h1><marquee>Мои покупки</marquee></h1>
                             </ContentHeader>
                             <CardList>
                                 {goodsInOrders.map((item) => {

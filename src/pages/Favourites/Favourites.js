@@ -33,7 +33,7 @@ const Favourites = () => {
                     ?
                     <Fragment>
                         <ContentHeader>
-                            <h1>Мои закладки</h1>
+                            <h1>Мои закладки</h1><img src="/img/heart.png" alt="heart"/>
                         </ContentHeader>
                         <CardList>
                             {goodsInFavourites.map((item) => {
