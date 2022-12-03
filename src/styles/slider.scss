@@ -1,0 +1,30 @@
+.slider {
+    position: relative;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    background-position: center center;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+     border-radius: 20px;
+}
+
+.slider-img {
+
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    transition: all 0.2s;
+    background-position: center center;
+
+}
+
+.slider-img-prev {
+    transform: translateX(-100%);
+}
+
+.slider-img-next {
+    transform: translateX(100%);
+}

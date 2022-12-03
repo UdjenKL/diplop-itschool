@@ -4,9 +4,13 @@ import Wrapper from "../../components/Wrapper";
 import ContentHeader from "../../components/Container/ContentHeader";
 import ContentWrapper from "../../components/Container";
 import {Fragment} from "react";
+import './styles.scss'
+import {Slider} from "../Slider/Slider";
+
 
 const About = () => {
     return (
+
         <Wrapper>
             <Header/>
             <ContentWrapper>
@@ -14,7 +18,7 @@ const About = () => {
                     <ContentHeader>
                         <h1>О нас</h1>
                         <p>
-                            Агенство "Праздничный" коктейль - это розничный магазин стильной упаковки подарков и изделий
+                            Наша компания это розничный магазин стильной упаковки подарков и изделий
                             ручной работы. Здесь вы найдете большой выбор товара для создания красивой и уникальной
                             упаковки своими руками: крафт коробки, коробки с дизайнерскими принтами, деревянные коробки,
                             крафт пакеты, подарочная крафт бумага, бумажная стружка, бумага тишью, стильные открытки,
@@ -35,6 +39,11 @@ const About = () => {
                             используемых материалов: в них нет вредных веществ и некачественных красителей, которые
                             могут вызвать аллергическую реакцию.
                         </p>
+
+
+
+
+<Slider/>
                     </ContentHeader>
                 </Fragment>
             </ContentWrapper>

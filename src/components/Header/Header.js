@@ -60,7 +60,7 @@ const Header = () => {
             <Link to='/'>
                 <div className="header_left">
 
-                    <img width={400} height={120} src='/img/logo.jpg' alt=""/>
+                    <img width={450} height={140} src='/img/logo.jpg' alt=""/>
 
 
                 </div>
@@ -68,17 +68,23 @@ const Header = () => {
 
             <ul className="header_right">
                 <li>
-                    <Link to={'/about'}>
-                        <img src="/img/about.png" alt="about"/>
+                    <Link to={'/'}>
+                         <h4>Главная</h4>
+                        {/*<img width={18} height={18} src="/img/about.png" alt="about"/>*/}
                     </Link>
-                    <h4>Вкусные букеты</h4>
-                        <p>+375295023044</p>
+                </li>
+                <li>
+                    <Link to={'/about'}>
+                         <h4>О нас</h4>
+                        {/*<img width={18} height={18} src="/img/about.png" alt="about"/>*/}
+                    </Link>
                 </li>
                 <li className='backet' onClick={handleCartIconClick}>
                     <img width={18} height={18} src='/img/backet.svg' alt=""/>
-                    <span>{priceSumm} бел.р</span></li>
+                    <h4 color="green">{priceSumm} бел.р</h4></li>
                 <li className='heart'>
                     <Link to={'/favourites'}>
+
                         <img width={18} height={18} src='/img/heart.svg' alt=""/>
                     </Link>
                 </li>
