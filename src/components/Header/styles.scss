@@ -47,52 +47,124 @@
     padding-bottom: 20px;
 
   }
+  @media (max-width: 768px) {
 
-  &_left {
+    .header_left {
+      img {
+        padding-top: 20px;
+        width: 450px;
+        height: 160px;
+      }
+    }
+    
+    h4 {
+      font-size: 12px;
+    }
+
+  }
+
+  @media (max-width: 425px) {
+
+    .header_left {
+      img {
+        padding-top: 20px;
+        width: 280px;
+        height: 110px;
+      }
+    }
+    
+    h4 {
+      font-size: 12px;
+    }
+
+  }
+
+  @media (max-width: 375px) {
+
+    .header_left {
+      img {
+        padding-top: 20px;
+        width: 280px;
+        height: 110px;
+      }
+    }
+    
+    h4 {
+      font-size: 12px;
+    }
+
+  }
+
+  @media (max-width: 320px) {
+
+    .header_left {
+      img {
+        padding-top: 20px;
+        width: 240px;
+        height: 100px;
+      }
+
+    }
+
+    .header_right {
+      .backet {
+        align-items: center;
+      }
+
+    h4 {
+      font-size: 10px;
+    }
+
+    gap: 20px;
+
+  }
+}
+
+&_left {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 15px;
+  }
+
+  p {
+    color: $color-text-grey-2;
+  }
+
+  @include mq($mq-md) {
+    padding-bottom: 40px;
+  }
+
+}
+
+&_right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  * {
+    cursor: pointer;
+  }
+
+  .backet, .heart, .user {
     display: flex;
-    align-items: center;
 
     img {
-      margin-right: 15px;
-    }
-
-    p {
-      color: $color-text-grey-2;
-    }
-
-    @include mq($mq-md) {
-      padding-bottom: 40px;
-    }
-
-  }
-
-  &_right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-
-    * {
-      cursor: pointer;
-    }
-
-    .backet, .heart, .user {
       display: flex;
-
-      img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 10px;
-      }
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
     }
-
-    .backet {
-      img {
-        margin-right: 10px;
-      }
-    }
-
   }
+
+  .backet {
+    img {
+      margin-right: 10px;
+    }
+  }
+
+}
 
 }

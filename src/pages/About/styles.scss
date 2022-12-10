@@ -6,3 +6,51 @@
   font-size: 1.5em;
   text-align: justify;
 }
+
+@media (max-width: 768px) {
+  
+  h1 {
+    font-size: 20px;
+  }
+  .content-header {
+    p {
+      font-size: 15px;
+      padding: 0 10px 0 10px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  
+  h1 {
+    font-size: 15px;
+  }
+  .content-header {
+    p {
+      font-size: 15px;
+      padding: 0 10px 0 10px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  
+  h1 {
+    font-size: 15px;
+  }
+  .content-header {
+    p {
+      font-size: 10px;
+      padding: 0 10px 0 10px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .content-header {
+    p {
+      font-size: 10px;
+      padding: 0 10px 0 10px;
+    }
+  }
+}
