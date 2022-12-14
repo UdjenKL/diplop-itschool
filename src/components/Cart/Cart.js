@@ -80,7 +80,7 @@ const Cart = ({onClose, items, handleOrder, handleCart, priceSumm}) => {
                         : (orderNumber)
                             ? <div className='cart_final'>
                                 <div className='cart_final-wrapper'>
-                                    <img src="/img/order.svg" alt=""/>
+                                    {/*<img src="/img/order.svg" alt=""/>*/}
                                     <h1>Заказ #{orderNumber} оформлен </h1>
                                     <p>Совсем скоро с вами свяжется специалист для уточнения деталей</p>
                                     <Link to='/'>
@@ -92,7 +92,6 @@ const Cart = ({onClose, items, handleOrder, handleCart, priceSumm}) => {
                             </div>
                             : <div className='cart_final'>
                                 <div className='cart_final-wrapper'>
-                                    <img src="/img/about.png" alt=""/>
                                     <h1>Корзина пустая</h1>
                                     <Link to='/'>
                                         <Button onClick={onClose} type='arrow-left'>
